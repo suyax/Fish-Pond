@@ -29,7 +29,7 @@ var octopus = {
   },
 
   counterClick: function(fish) {
-    this.count += 1;
+    fish.count ++;
     fishNumShow.render(fish);
   },
 
@@ -57,7 +57,6 @@ var octopus = {
 
 //view 1. buttons 2. display
 var fishButtons = {
-
   init: function() {
     this.render();
 
@@ -77,7 +76,6 @@ var fishButtons = {
 var fishDisplay = {
   init: function() {
     this.render(fishes['Amy']);
-
   },
 
   render: function(fish) {
