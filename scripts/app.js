@@ -63,13 +63,15 @@ var fishButtons = {
   },
 
   render: function() {
-    var htmlStr = '';
     _.each(fishes, function(fish) {
-      htmlStr += '<button id="button' + fish.name +
-        '"onclick="fishDisplay.render(' + fish + ');fishNumShow.render(' +
-        fish + ');">' + fish.name + '</button>';
+        elem = document.createElement('button');
+        elem.textContent = fish.name;
+        elem.addEventListener('click',(function() {
+          fishDisplay.render(fish);
+          fishNumShow.render(fish);
+        }));
+    $fishlist.append(elem);
     });
-    ($fishlist).append(htmlStr);
   }
 };
 

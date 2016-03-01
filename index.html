@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style/style.css">
-  <title>Fish Pond</title>
-</head>
-
-<body>
-  <div id="fishPond">
-    <H1> Fish Pond </H1>
-  </div>
-  <div id="fishdisplay">
-  </div>
-  <div id="fishnumshow">
-  </div>
-  <button onclick="octopus.adminMode()">administration</button>
-  <form id="form1" class="formoff">
-    Fish Name:
-    <br>
-    <input id="fishname" type="text">
-    <br> Fish Photo:
-    <br>
-    <input id="fishphoto" type="text">
-    <br> Fish Fed:
-    <br>
-    <input id="fishfed" type="number" name="fishfed">
-    <br>
-    <button id="save" type="button">Save</button>
-    <button onclick="octopus.nonAdminMode()">Cancel</button>
-  </form>
-</body>
-
+  <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <title>Fish Pond</title>
+  </head>
+  <body>
+    <div id="fishPond">
+      <H1> Fish Pond </H1>
+    </div>
+    <div id="fishdisplay">
+    </div>
+    <div id="fishnumshow">
+    </div>
+    <button onclick="octopus.adminMode()">administration</button>
+    <form id="form1" class="formoff">
+      Fish Name:
+      <br>
+      <input id="fishname" type="text">
+      <br> Fish Photo:
+      <br>
+      <input id="fishphoto" type="text">
+      <br> Fish Fed:
+      <br>
+      <input id="fishfed" type="number" name="fishfed">
+      <br>
+      <button id="save" type="button">Save</button>
+      <button onclick="octopus.nonAdminMode()">Cancel</button>
+    </form>
+    <div id="fishlist">
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js">
+    </script>
+    <script src="scripts/app.js">
+    </script>
+  </body>
 </html>
-<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-<script src="scripts/app.js"></script>
