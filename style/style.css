@@ -1,7 +1,10 @@
 body{
-  margin: 20px;
-  background-color: lightgray;
+  margin:10px;
+  background-image: url("http://wallpapercave.com/wp/hS74rFf.jpg");
+  background-size: cover;
+  color:white;
 }
+
 .formoff {
   visibility: hidden;
 }
@@ -10,10 +13,24 @@ body{
   visibility: visible;
 }
 
-button {
-  margin-right: 10px;
-  margin-bottom: 10px;
+.status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;;
+}
+
+li {
+  margin: 20px;
+}
+
 img {
-  width: 50vw;
+  margin: 10px;
+  width: 100vw;
+  align-self: center;
 }

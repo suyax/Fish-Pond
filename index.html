@@ -8,35 +8,29 @@
     <title>Fish Pond</title>
   </head>
   <body>
-    <div id="fishPond">
-      <H1> Fish Pond </H1>
-    </div>
-    <div id="fishdisplay">
-    </div>
-    <div id="fishnumshow">
-    </div>
-    <button onclick="octopus.adminMode()">administration</button>
-    <form id="form1" class="formoff">
-      Fish Name:
-      <br>
-      <input id="fishname" type="text">
-      <br> Fish Photo:
-      <br>
-      <input id="fishphoto" type="text">
-      <br> Fish Fed:
-      <br>
-      <input id="fishfed" type="number" name="fishfed">
-      <br>
-      <button id="save" type="button">Save</button>
-      <button onclick="octopus.nonAdminMode()">Cancel</button>
-    </form>
-    <div id="fishlist">
+    <h1> Fish Pond </h1>
+    <h3> Pick a gold fish to feed</h3>
+    <ul data-bind="foreach: fishList">
+      <li data-bind="text: name, click: $parent.changeFish"></li>
+    </ul>
+    <div class="fish-container" data-bind="with: currentFish">
+      <h2>Name: <span data-bind="text: name"></span></h2>
+      <div class="status">
+        <h4>Feeling: <span data-bind="text: healthState"></span></h4>
+        <h4>Fed Times: <span data-bind="text: clickCount"></span></h4>
+      </div>
+        <h3>Love To Eat<h3>
+        <ul data-bind="foreach: favoriteFood">
+          <li data-bind="text: $data"></li>
+        </ul>
+      <img class= img src="" alt="golden fish" data-bind="click: $parent.incrementCounter, attr:{src: imgSrc}">
     </div>
     <script src="https://code.jquery.com/jquery-2.2.1.min.js">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js">
     </script>
-    <script src="scripts/app.js">
+    <script src="scripts/model.js">
     </script>
   </body>
 </html>
