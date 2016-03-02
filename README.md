@@ -1,4 +1,9 @@
 # Fish-Pond
 
-_Vanilla JS and jQuery Application for user to feed and keep track of how many times each fish has been fed_
+_knockout JS single webpage Application for feeding gold fish_
+
+* List each fish's favorite food to eat *
+* Record how many time you have fed each individual fish *
+* Tracking fish health status *
+
 
